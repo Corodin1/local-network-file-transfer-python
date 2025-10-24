@@ -1,52 +1,128 @@
+#Local Network File Transfer
 
-# Local network file transfer
+A modern, GUI-based file transfer application for local networks with an Apple-inspired design.
+Features
 
-Launch the `server.py` file on your desired 'server' machine and launch `client.py` on your other machine.
+    Modern GUI: Beautiful dark theme with rounded corners and smooth animations
 
-Please note that you can only transfer files, no folders or subfolders. Use .zip or .rar if you want to transfer entire folders or large files.
+    Easy File Transfers: Drag-and-drop style interface for uploading and downloading
 
+    Real-time Progress: Live progress bars with speed and ETA information
 
-## Server setup
+    Cross-platform: Works on Windows, macOS, and Linux
 
-Once server.py is launched you will have to choose a folder that will be used as your shared space/cloud
+    No Installation Required: Portable executable available
 
-Copy the directory and paste it in the console.
+##Quick Start
+##Server Setup
 
-To start the server use the launch command.
+    Run server.py on the machine you want to use as the server
 
-```launch```
+    Enter the path to the folder you want to share when prompted
 
-The console will display the server IP and PORT, you will need those for setting up clients.
+    Type launch to start the server
 
-### Available server commands
+    Note the displayed IP address and port (default: 8888)
 
-``` show - Show directory contents
- launch - Start the server
- stop - Stop the server
- status - Check server status
- refresh - Refresh file list
- exit - Exit the program
-``` 
+##Client Setup
 
-## Client setup
-Launch `client.py`or `client.exe` and run the connect command with your server IP and PORT
+    Run client.py or client.exe on the client machine
 
-```connect 111.111.111.111 8888```
+    Enter the server's IP address and port in the connection panel
 
-To upload or download files simply use the `download` command with the file index (use list command to show the files and their index) or `upload`commands + your file path, to make things easier you can place your file in the same directory as the program so you can just type your file name and extention.
+    Click "Connect" to establish connection
 
-Downloaded files will be placed in `downloads` folder in the same dir as your client file.
+    Use the intuitive GUI to browse, upload, and download files
 
-### Available client commands
+##Server Commands
 
-```connect [host] [port]    - Connect to server (port defaults to 8888)
- list                     - List files in server's shared directory
- info [index]             - Get information about a file by index
- download [index]         - Download a file from the server by index
- upload [filepath]        - Upload a file to the server
- send [message]           - Send a message to the server
- status                   - Show connection status
- disconnect               - Disconnect from server
- help                     - Show this help message
- exit                     - Exit the program
- ```
+##Once server.py is running, you can use these commands in the server console:
+
+    show - Display directory contents
+
+    launch - Start the server
+
+    stop - Stop the server
+
+    status - Check server status
+
+    refresh - Refresh file list
+
+    exit - Exit the program
+
+##Client Features
+##Connection Panel
+
+    Host: Server IP address (default: localhost)
+
+    Port: Server port (default: 8888)
+
+    Connect/Disconnect: One-click connection management
+
+    Status Indicator: Visual connection status
+
+##File Operations
+
+    Refresh List: Update the file list from the server
+
+    File Info: Double-click any file to view detailed information
+
+    Download: Select a file and click "Download"
+
+    Upload: Click "Upload" to select and send files to the server
+
+##Progress Tracking
+
+    Real-time upload and download progress bars
+
+    Transfer speed and ETA display
+
+    Visual completion indicators
+
+##Activity Log
+
+    Timestamped operation history
+
+    Color-coded messages (success, error, info)
+
+    Auto-scrolling to latest activity
+
+##Important Notes
+
+    Files Only: The system transfers individual files, not folders
+
+    Large Files: For large files or folders, compress them to .zip or .rar first
+
+    Downloads: All downloaded files are saved in the downloads folder
+
+    Network: Ensure both machines are on the same local network
+
+##System Requirements
+
+    Python 3.8+ (for .py version)
+
+    Windows 7+ / macOS 10.12+ / Linux (for .exe version)
+
+    Network connectivity between machines
+
+##Troubleshooting
+
+    Connection Issues: Verify IP address and check firewall settings
+
+    File Not Found: Ensure the shared directory exists on the server
+
+    Permission Errors: Check file/folder permissions on both machines
+
+##Version Information
+
+##Current version features a complete GUI overhaul with:
+
+    CustomTkinter-based modern interface
+
+    Apple-inspired dark theme design
+
+    Rounded corners and smooth animations
+
+    Hover effects and visual feedback
+
+    Professional layout and spacing
